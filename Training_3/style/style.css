@@ -1,11 +1,14 @@
 * {
   box-sizing: border-box;
+  color: #141313;
 }
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: flex;
+  justify-content: space-between;
   max-width: 1920px;
 }
 
@@ -15,7 +18,7 @@ body {
   padding: 48px;
   height: 100vh;
   color: #FFF;
-  position: fixed;
+  position: sticky;
   top: 0;
 }
 .menu__logo {
@@ -68,12 +71,10 @@ body {
 }
 
 .home {
-  padding-top: 105px;
   height: 100vh;
-  margin-left: 300px;
+  max-width: 1635px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   gap: 200px;
 }
@@ -148,6 +149,21 @@ body {
   top: 540px;
   right: 20px;
 }
+.home__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.home__social_line {
+  height: 131px;
+  width: 1px;
+  border: #141313 1px solid;
+}
+.home__social svg {
+  width: 40px;
+  transform: rotate(-90deg);
+}
 
 .contacts {
   margin-top: 64px;
@@ -168,4 +184,89 @@ body {
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  height: 100vh;
+}
+.about__welcome h4 {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.about__welcome h1 {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.about__pers {
+  display: flex;
+  flex-direction: column;
+}
+.about__pers_img {
+  margin-bottom: 32px;
+}
+.about__pers_img img {
+  max-width: 400px;
+}
+.about__pers h2 {
+  text-transform: uppercase;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+.about__gradient {
+  background: linear-gradient(90deg, #B86ADF 0%, #FF6C63 50%, #FFB147 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about__pers h4 {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+  margin-bottom: 48px;
+}
+.about__pers h4 span {
+  font-style: normal;
+  font-weight: 400;
+}
+.about__pers_a {
+  padding: 16px 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about__pers a {
+  color: #141313;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.about__info {
+  display: flex;
+  gap: 145px;
+}
+.about__contact {
+  display: flex;
+  gap: 85px;
+}
+.about__contact_b {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.about__contact_bi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */

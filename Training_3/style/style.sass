@@ -1,11 +1,17 @@
+$color_text: #141313
+
 *
     box-sizing: border-box
+    color:$color_text
 
 body
     font-family: "IBM Plex Sans", sans-serif
     font-weight: 400
     font-style: normal
+    display: flex
+    justify-content: space-between
     max-width: 1920px
+
 
 .menu
     max-width: 285px
@@ -13,7 +19,7 @@ body
     padding: 48px
     height: 100vh
     color: #FFF
-    position: fixed
+    position: sticky
     top: 0
     &__logo
         margin-bottom: 100px
@@ -55,12 +61,10 @@ body
         text-align: center
 
 .home
-    padding-top: 105px
     height: 100vh
-    margin-left: 300px
+    max-width: 1635px
     display: flex
     flex-wrap: wrap
-    justify-content: center
     align-items: center
     gap: 200px
     &__info
@@ -120,6 +124,18 @@ body
             position: absolute
             top: 540px
             right: 20px
+    &__social
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 20px
+        &_line
+            height: 131px
+            width: 1px
+            border: #141313 1px solid
+    &__social svg
+        width: 40px
+        transform: rotate(-90deg)
 
 .contacts
     margin-top: 64px
@@ -139,4 +155,69 @@ body
         flex-wrap: wrap
         align-items: center
 
-.home
+main
+    display: flex
+    flex-direction: column
+
+.about
+    height: 100vh
+    &__welcome h4
+        font-size: 18px
+        font-weight: 600
+        font-style: italic
+        margin-bottom: 16px
+    &__welcome h1
+        font-weight: 700
+        font-size: 48px
+        text-transform: uppercase
+        margin-bottom: 48px
+    &__pers
+        display: flex
+        flex-direction: column
+        &_img
+            margin-bottom: 32px
+        &_img img
+            max-width: 400px
+    &__pers h2
+        text-transform: uppercase
+        font-size: 48px
+        margin-bottom: 12px
+    &__gradient
+        background: linear-gradient(90deg,#B86ADF 0%,#FF6C63 50%,#FFB147 100%)
+        background-clip: text
+        -webkit-text-fill-color: transparent
+    &__pers h4
+        font-weight: 700
+        font-style: italic
+        font-size: 24px
+        margin-bottom: 48px
+    &__pers h4 span
+        font-style: normal
+        font-weight: 400
+    &__pers_a
+        padding: 16px 50px
+        display: flex
+        align-items: center
+        gap: 10px
+    &__pers a
+        color:$color_text
+        font-size: 18px
+        font-weight: 500
+        text-decoration: underline
+    &__info
+        display: flex
+        gap: 145px
+    &__contact
+        display: flex
+        gap: 85px
+        &_b
+            display: flex
+            flex-direction: column
+            gap: 24px
+        &_bi
+            display: flex
+            align-items: center
+            gap: 12px
+            font-size: 18px
+            font-weight: 700
+            font-style: italic
