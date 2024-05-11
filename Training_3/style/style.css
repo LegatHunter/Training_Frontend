@@ -68,6 +68,7 @@ body {
   line-height: 22px;
   bottom: 48px;
   text-align: center;
+  color: #fff;
 }
 
 .home {
@@ -199,6 +200,7 @@ main {
   font-weight: 600;
   font-style: italic;
   margin-bottom: 16px;
+  margin-top: 100px;
 }
 .about__welcome h1 {
   font-weight: 700;
@@ -209,6 +211,7 @@ main {
 .about__pers {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .about__pers_img {
   margin-bottom: 32px;
@@ -218,6 +221,7 @@ main {
 }
 .about__pers h2 {
   text-transform: uppercase;
+  font-weight: 700;
   font-size: 48px;
   margin-bottom: 12px;
 }
@@ -268,5 +272,48 @@ main {
   gap: 12px;
   font-size: 18px;
   font-weight: 700;
+  font-style: italic;
+}
+.about__contact_bi img {
+  width: 40px;
+}
+.about__exp {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 64px;
+  margin-top: 48px;
+}
+.about__years-clients {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.about__p {
+  max-width: 315px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.about__gradient_i {
+  font-size: 48px;
+  font-weight: 700;
+}
+.about__p-italic {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+}
+.about__quote {
+  display: flex;
+  gap: 12px;
+  padding: 40px;
+  background-color: #141313;
+  color: #fff;
+}
+.about__quote_text p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
   font-style: italic;
 }/*# sourceMappingURL=style.css.map */
