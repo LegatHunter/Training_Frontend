@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   color: #141313;
@@ -7,8 +8,6 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  display: flex;
-  justify-content: space-between;
   max-width: 1920px;
 }
 
@@ -18,8 +17,7 @@ body {
   padding: 48px;
   height: 100vh;
   color: #FFF;
-  position: sticky;
-  top: 0;
+  position: fixed;
 }
 .menu__logo {
   margin-bottom: 100px;
@@ -71,13 +69,20 @@ body {
   color: #fff;
 }
 
+.site {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 285px;
+}
+
 .home {
   height: 100vh;
   max-width: 1635px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 200px;
+  margin-right: 15vw;
 }
 .home__info {
   position: relative;
@@ -106,7 +111,6 @@ body {
 }
 .home__info h2 span {
   font-style: normal;
-  font-weight: 400;
 }
 .home__info a {
   color: #FFF;
@@ -166,6 +170,11 @@ body {
   transform: rotate(-90deg);
 }
 
+.aside {
+  position: fixed;
+  right: 2vw;
+}
+
 .contacts {
   margin-top: 64px;
   display: flex;
@@ -190,11 +199,9 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  margin-right: 10vw;
 }
 
-.about {
-  height: 100vh;
-}
 .about__welcome h4 {
   font-size: 18px;
   font-weight: 600;
@@ -235,14 +242,13 @@ main {
   font-weight: 700;
   font-style: italic;
   font-size: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 .about__pers h4 span {
   font-style: normal;
   font-weight: 400;
 }
 .about__pers_a {
-  padding: 16px 50px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -256,6 +262,7 @@ main {
 .about__info {
   display: flex;
   gap: 145px;
+  margin-bottom: 110px;
 }
 .about__contact {
   display: flex;
@@ -292,7 +299,6 @@ main {
 .about__p {
   max-width: 315px;
   font-size: 18px;
-  font-weight: 400;
   line-height: 24px;
 }
 .about__gradient_i {
@@ -316,4 +322,152 @@ main {
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
+}
+.about__experience {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(90deg, #B86ADF 0%, #FF6C63 50%, #FFB147 100%);
+  padding-top: 120px;
+}
+.about__experience_text p, .about__experience h4, .about__experience a {
+  color: #fff;
+}
+.about__experience_italic {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.about__experience_text h4 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.about__experience_text p {
+  font-style: 18px;
+  margin-bottom: 48px;
+  max-width: 380px;
+  line-height: 28px;
+}
+.about__experience_text a {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 40px;
+  background-color: #000;
+}
+.about__experience_years {
+  width: 545px;
+}
+.about__experience_years hr {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  opacity: 0.2;
+}
+.about__experience_years hr:last-child {
+  margin-bottom: 120px;
+}
+.about__experience_years h5, .about__experience h6, .about__experience p {
+  color: #fff;
+}
+.about__experience_year {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.about__experience_year h6 {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+}
+.about__experience_year p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.about__experience_inf h5 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.vertmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertmenu ul li {
+  position: relative;
+  margin: 0;
+  line-height: 30px;
+}
+
+.vertmenu .subCat, .chka {
+  top: 0;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.vertmenu .subCat.plus,
+.chka:before,
+.vertmenu .subCat.minus,
+.subCat:checked + .chka:before {
+  content: "+";
+  font-size: 26px;
+  color: #1266B1;
+  font-weight: bold;
+  font-family: Courier;
+}
+
+.vertmenu .subCat.minus, .subCat:checked + .chka:before {
+  content: "-";
+}
+
+.vertmenu a {
+  color: #477AB9;
+  font-size: 16px;
+}
+.vertmenu ul li li a {
+  color: #666;
+  font-size: 15px;
+}
+.vertmenu a.active {
+  color: #00B1EC;
+}
+
+.vertmenu a:hover {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.vertmenu > ul > li ul {
+  display: none;
+}
+
+.vertmenu > ul > li a.active + span + ul {
+  display: block !important;
+}
+
+.vertmenu > ul > li .subCat:checked ~ ul {
+  display: block !important;
+}
+
+.vertmenu ul li li a:before {
+  content: "›";
+  font-size: 20px;
+  padding-right: 6px;
+  color: #666;
+  font-weight: bold;
+}
+
+.vertmenu > ul li li a:hover:before {
+  color: #1266B1;
 }/*# sourceMappingURL=style.css.map */
